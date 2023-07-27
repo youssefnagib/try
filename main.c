@@ -25,13 +25,13 @@ int main(int ac, char **argv)
 		}
 
 		lineptr_copy = malloc(sizeof(char) * nchars_read);
-		if (lineptr_copy == Null)
+		if (lineptr_copy == NULL)
 		{
 			perror("tsh: memory allocation error");
 			return (-1);
 		}
 		strcpy(lineptr_copy, lineptr);
-		token - strtok(lineptr, delim);
+		token = strtok(lineptr, delim);
 
 		while (token != NULL)
 		{
